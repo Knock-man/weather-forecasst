@@ -62,7 +62,7 @@ background-color:rgb(0,85,0);
       <cursorShape>SizeVerCursor</cursorShape>
      </property>
     </widget>
-    <widget class="QLabel" name="dateLabel">
+    <widget class="QLabel" name="dateLb">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -153,7 +153,7 @@ color:rgb(85, 255, 0);</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>191</y>
+       <y>190</y>
        <width>351</width>
        <height>141</height>
       </rect>
@@ -169,30 +169,10 @@ color:rgb(85, 255, 0);</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="pm25TitleLb">
+      <item row="2" column="0">
+       <widget class="QLabel" name="fxTitleLb">
         <property name="text">
-         <string>PM2.5</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="shiduTitleLb">
-        <property name="text">
-         <string>湿度</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="FlTitleLb">
-        <property name="text">
-         <string>风力</string>
+         <string>风向</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -219,6 +199,16 @@ color:rgb(85, 255, 0);</string>
         </property>
        </widget>
       </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="pm25TitleLb">
+        <property name="text">
+         <string>PM2.5</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="1" colspan="2">
        <widget class="QLabel" name="fxLb">
         <property name="text">
@@ -229,10 +219,20 @@ color:rgb(85, 255, 0);</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="fxTitleLb">
+      <item row="0" column="0">
+       <widget class="QLabel" name="shiduTitleLb">
         <property name="text">
-         <string>风向</string>
+         <string>湿度</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="FlTitleLb">
+        <property name="text">
+         <string>风力</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -247,7 +247,7 @@ color:rgb(85, 255, 0);</string>
        <x>170</x>
        <y>60</y>
        <width>101</width>
-       <height>31</height>
+       <height>37</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
@@ -472,7 +472,7 @@ background-color:rgba(60,60,60,0);</string>
        </widget>
       </item>
       <item row="4" column="3" rowspan="2">
-       <widget class="QLabel" name="typeIc3Lb">
+       <widget class="QLabel" name="typeIco3Lb">
         <property name="styleSheet">
          <string notr="true">image:url(:/day/day/雨.png);</string>
         </property>
@@ -515,7 +515,7 @@ background-color:rgba(60,60,60,0);</string>
        </widget>
       </item>
       <item row="4" column="5" rowspan="2">
-       <widget class="QLabel" name="typeIc5Lb">
+       <widget class="QLabel" name="typeIco5Lb">
         <property name="styleSheet">
          <string notr="true">image:url(:/day/day/雨.png);</string>
         </property>
@@ -541,7 +541,7 @@ background-color:rgba(60,60,60,0);</string>
        </widget>
       </item>
       <item row="4" column="4" rowspan="2">
-       <widget class="QLabel" name="typeIc4Lb">
+       <widget class="QLabel" name="typeIco4Lb">
         <property name="styleSheet">
          <string notr="true">image:url(:/day/day/雨.png);</string>
         </property>
@@ -577,7 +577,7 @@ background-color:rgba(60,60,60,0);</string>
        </widget>
       </item>
       <item row="4" column="0" rowspan="2">
-       <widget class="QLabel" name="typeIc0Lb">
+       <widget class="QLabel" name="typeIco0Lb">
         <property name="styleSheet">
          <string notr="true">image:url(:/day/day/雨.png);</string>
         </property>
@@ -633,7 +633,7 @@ background-color:rgba(60,60,60,0);</string>
        </widget>
       </item>
       <item row="4" column="2" rowspan="2">
-       <widget class="QLabel" name="typeIc2Lb">
+       <widget class="QLabel" name="typeIco2Lb">
         <property name="styleSheet">
          <string notr="true">image:url(:/day/day/雨.png);</string>
         </property>
@@ -874,13 +874,16 @@ background-color:argb(60,60,60,0);</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>339</y>
+       <y>340</y>
        <width>189</width>
        <height>101</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout_5">
-      <item row="0" column="0" rowspan="2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <item row="1" column="0" rowspan="2">
        <widget class="QLabel" name="label_2">
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;感&lt;br/&gt;冒&lt;br/&gt;指&lt;br/&gt;数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -890,8 +893,17 @@ background-color:argb(60,60,60,0);</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1" rowspan="2">
-       <widget class="QTextBrowser" name="ganmaoBrowser"/>
+      <item row="1" column="2" rowspan="2">
+       <widget class="QTextBrowser" name="ganmaoBrowser">
+        <property name="styleSheet">
+         <string notr="true">background-color: #333;
+color: white;
+font-family: Arial, sans-serif;
+font-size: 13px;
+text-align: center;
+padding: 20px;</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
